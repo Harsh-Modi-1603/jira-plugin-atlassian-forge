@@ -1,0 +1,32 @@
+modules:
+  jira:issuePanel:
+    - key: test-case-panel
+      resource: main
+      resolver:
+        function: resolver
+      viewportSize: medium
+      title: test-case-generator
+      icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
+
+  function:
+    - key: resolver
+      handler: index.handler
+
+resources:
+  - key: main
+    path: static/hello-world/build
+
+permissions:
+  scopes:
+    - read:jira-work
+  external:
+    fetch:
+      backend:
+        - https://llm-api-inv4.onrender.com
+      client:
+        - https://llm-api-inv4.onrender.com
+
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/a6610ecb-bd59-4b73-bb26-af77f17cc9bf

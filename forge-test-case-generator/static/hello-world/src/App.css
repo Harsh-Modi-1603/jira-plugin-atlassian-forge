@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 15px;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.btn {
+  background-color: #0052CC;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-disabled {
+  background-color: rgb(11, 103, 194);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.chat-btn {
+  height: 40px;
+}
+
+.copy-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 6px 10px 0 0;
+  z-index: 1;
+}
+
+.copy-text {
+  background-color: #0052cc;
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-text:hover {
+  background-color: #0747A6;
+}
+
+.message-list {
+  margin-bottom: 20px;
+}
+
+.msg {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.user-msg {
+  background-color: #e0eaff;
+  text-align: right;
+}
+
+.ai-msg {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.chat-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  height: 40px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.chat-input.input-error {
+  border-color: red !important;
+  outline: none;
+}
+
+.char-indicator {
+  position: absolute;
+  top: -18px;
+  right: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.char-error-msg {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.error-msg {
+  background-color: #ffe5e5;
+  color: #a00;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.loading-msg {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.btn-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
